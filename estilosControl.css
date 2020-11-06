@@ -1,0 +1,14 @@
+h1{
+	color: #002699;
+	text-align: center;
+	text-shadow: 4px 4px 10px red;
+	font-size: 350%;
+}
+
+#imagenPlanetas{
+	height: 420px;
+	width: 490px;
+	padding: 10%;
+  border-radius: 30%;
+	position: absolute;
+}

@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+	<meta charset="utf-8">
+	<title> Control. </title>
+	<link rel="stylesheet" type="text/css" href="estilosControl.css">
+	<style>
+	#imagenPlanetas{
+		height: 420px;
+		width: 490px;
+		position: absolute;
+	}
+	</style>
+</head>
+<body>
+	<h1>  &quot;Contol de la imagen.&quot;  </h1>
+	<hr>
+	<img id="imagenPlanetas" src="Planetas.jpg" alt="IMAGEN DE PLANETAS.">
+
+	<input type="button" value="Arriba" onclick="clickArriba()">
+	<br>
+	<input type="button" value="Abajo" onclick="clickAbajo()">
+	<br>
+	<input type="button" value="Izquierda" onclick="clickIzquierda()">
+	<br>
+	<input type="button" value="Derecha" onclick="clickDerecha()">
+	<br>
+	<input type="button" value="Reiniciar" onclick="clickReiniciar()">
+	<br>
+	<script>
+
+	let imagenArriba = 300;
+	let imagenIzquierda = 300;
+  let guardarImagen = document.getElementById("imagenPlanetas");
+  guardarImagen.style.cssText = `top: ${imagenArriba}px; Izquierda:${imagenIzquierda}px`;
+
+	function clickArriba(){
+		imagenArriba = imagenArriba - 20;
+		guardarImagen.style.top = imagenArriba + "px";
+	}
+	//******************************************************************************************
+	function clickAbajo(button){
+		imagenArriba = imagenArriba + 20;
+		guardarImagen.style.top = imagenArriba + "px";
+	}
+	//*******************************************************************************************
+	function clickIzquierda(button){
+		imagenIzquierda = imagenIzquierda - 20;
+		guardarImagen.style.left = imagenIzquierda + "px";
+	}
+	//*********************************************************************************************
+	function clickDerecha(button){
+		imagenIzquierda = imagenIzquierda + 20;
+		guardarImagen.style.left = imagenIzquierda + "px";
+	}
+	//********************************************************************************************
+	function clickReiniciar(){
+  if (imagenArriba==300 && imagenIzquierda==300) {
+  	alert("La imagen esta en su posicion original.")
+  }
+	imagenArriba = 300;
+	imagenIzquierda = 300;
+	guardarImagen.style.cssText = `top: 100px; imagenIzquierda 100px`;
+	}
+	</script>
+
+</body>
+</html>
